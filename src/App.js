@@ -15,7 +15,8 @@ class App extends Component{
   state = {
     zim: zim.sort(function (a, b) {return Math.random() - 0.5;}),
     score: 0,
-    checkZim: []
+    checkZim: [],
+    highScore: 0
   };
 
   addScore = id => {
@@ -23,12 +24,20 @@ class App extends Component{
     console.log("The id: "+id);
     for(var x in this.state.checkZim){
       if(this.state.checkZim[x]===id){
-        this.setState({ checkZim:[], score: 0 });
+        if(this.state.score > this.state.highScore){
+        this.setState({ checkZim:[], score: 0, highScore: this.state.score, zim: zim.sort(function (a, b) {return Math.random() - 0.5;})});
+        } else {
+        this.setState({ checkZim:[], score: 0, zim: zim.sort(function (a, b) {return Math.random() - 0.5;})});
+        }
         return;
       }
     }
     this.state.checkZim.push(id);
+    if(this.state.highScore <= this.state.score){
+    this.setState({highScore: this.state.score+1});
+    }
     console.log(this.state.checkZim);
+
     // Set this.state.friends equal to the new friends array
     this.setState({ score: this.state.score +1, zim: zim.sort(function (a, b) {return Math.random() - 0.5;})});
     console.log(this.state.score)
@@ -41,7 +50,8 @@ class App extends Component{
     return (
       <Wrapper>
         <Title>Zim Click Game!</Title>
-        <Score>{this.state.score}</Score>
+        <Score score={this.state.score} highScore={this.state.highScore}></Score>
+        <br></br>
         {this.state.zim.map(zims => (
         <Game
           addScore={this.addScore}

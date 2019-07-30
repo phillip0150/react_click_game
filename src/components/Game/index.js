@@ -5,19 +5,15 @@ function Game(props) {
   return (
 
 
-<div className="card" onClick={()=>{ props.addScore(props.id);}}>
-<div className="card-content">
-<span>
+  <div className="card" onClick={()=>{ props.addScore(props.id);}}>
+  <div className="card-content">
+    <span>
       <div className="img-container">
         <img alt={props.name} src={props.image} />
       </div>
-      
-        
-      </span>
-
-</div>
-
-</div>
+    </span>
+  </div>
+  </div>
   );
 }
 
