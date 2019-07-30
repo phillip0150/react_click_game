@@ -21,7 +21,7 @@ First go to the game, [CLICK HERE](https://zim-click-game.herokuapp.com/)
 Once you enter the homescreen, on an image to begin!
 
 
-![screenShot](https://github.com/phillip0150/mongo_scraper_nyt_w_mongoose//blob/master/public/1.png?raw=true)
+![screenShot](https://github.com/phillip0150/react_click_game/blob/master/public/1.png)
 
 
 ### Game Rules
@@ -29,10 +29,10 @@ Once you enter the homescreen, on an image to begin!
 Click on an image to recieve a point. Once you click on an image, the game board shuffles. When selecting the next image, make sure not to select an image you have already picked. Once you pick on an image that has been picked, the game resets. If you beat the high score, you score will be added. 
 
 
-![screenShot](https://github.com/phillip0150/mongo_scraper_nyt_w_mongoose//blob/master/public/2.png?raw=true)
+![screenShot](https://github.com/phillip0150/react_click_game/blob/master/public/2.png)
 
 
-![screenShot](https://github.com/phillip0150/mongo_scraper_nyt_w_mongoose//blob/master/public/3.png?raw=true)
+![screenShot](https://github.com/phillip0150/react_click_game/blob/master/public/3.png)
 
 
 
